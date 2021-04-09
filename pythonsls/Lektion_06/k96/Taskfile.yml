@@ -1,0 +1,11 @@
+# https://taskfile.dev
+
+version: '3'
+
+
+tasks:
+  test:
+    desc: Aufruf Unit Tests
+    cmds:
+      - py.test
+    silent: true

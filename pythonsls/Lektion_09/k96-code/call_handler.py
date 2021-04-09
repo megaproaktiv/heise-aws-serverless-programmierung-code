@@ -1,0 +1,3 @@
+import index
+
+index.handler("","")

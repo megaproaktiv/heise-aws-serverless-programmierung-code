@@ -1,0 +1,20 @@
+# https://taskfile.dev
+
+version: '3'
+
+
+tasks:
+  test:
+    desc: Aufruf Unit Tests
+    cmds:
+      - py.test
+    silent: true
+
+  deploy:
+    desc: deploylambda
+    vars:
+      zip: ../dist/hello.zip
+      lambda: K96InfraStack-MyFunction3BAA72D1-B0ETTFWTVEXU
+    cmds:
+      - zip -r -dd -q {{.zip}} .
+      - aws lambda update-function-code --function-name  {{.lambda}} --zip-file fileb://{{.zip}}

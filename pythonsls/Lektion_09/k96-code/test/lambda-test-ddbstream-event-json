@@ -1,0 +1,20 @@
+{
+    'Records': [
+        {
+            'eventID': '0d0935a062f73ed3b392b124a8b2a396', 
+            'eventName': 'INSERT',
+            'eventVersion': '1.1',
+            'eventSource': 'aws:dynamodb', 
+            'awsRegion': 'eu-central-1', 
+            'dynamodb': 
+            {
+                'ApproximateCreationDateTime': 1615706431.0, 
+                'Keys': {'id': {'S': 'b63b9b50-8112-4787-a3a5-36b8a6890079'}
+                },
+               'SequenceNumber': '40164400000000028119537576', 
+                'SizeBytes': 38, 'StreamViewType': 'KEYS_ONLY'
+            }, 
+            'eventSourceARN': 'arn:aws:dynamodb:eu-central-1:230287552993:table/Weigh-rmzevapjnnfmtob77w4mwegpia-dev/stream/2021-03-14T07: 07: 04.250'
+        }
+    ]
+}
