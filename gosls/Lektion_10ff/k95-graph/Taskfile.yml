@@ -1,0 +1,34 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
+  build:
+    cmds:
+      - npm run build
+    silent: true    
+
+  list:
+    desc: list stacks
+    deps: [build]  
+    cmds:
+      - npx cdk list 
+
+  diff:
+    desc: diff stacks
+    deps: [build]  
+    cmds:
+      - npx cdk diff   
+
+  deploy:
+    desc: deploy stacks
+    deps: [build]  
+    cmds:
+      - npx cdk deploy   
