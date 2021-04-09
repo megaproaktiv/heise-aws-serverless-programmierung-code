@@ -1,0 +1,35 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  dist: dist
+  lambda: HelloLambda
+  bin: lambda
+  region: eu-west-1
+
+tasks:
+  init: 
+    desc: Npm package laden
+    dir: code
+    cmds: 
+      - npm i @aws-sdk/client-s3 --omit peer
+
+  package:
+    dir: code
+    cmds: 
+      - rm ../{{.dist}}/{{.bin}}.zip
+      - zip -r ../{{.dist}}/{{.bin}}.zip .
+    silent: true
+
+  deploy:
+    desc: Hochladen Lambda Funktionscode
+    deps: [package]
+    cmds:
+      - aws lambda update-function-code --function-name  {{.lambda}} --zip-file fileb://{{.dist}}/{{.bin}}.zip --region {{.region}}
+
+  invoke:
+    desc: Aufrufen lambda
+    cmds: 
+      - aws lambda invoke --function-name HelloLambda --region eu-west-1 out.json
+      - cat out.json

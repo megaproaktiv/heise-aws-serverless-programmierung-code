@@ -1,0 +1,72 @@
+{
+    "roleName": "HelloLambda-role-985c6nkk",
+    "policies": [
+      {
+        "name": "AWSLambdaBasicExecutionRole-19bcc8a5-cfdd-43cf-8b3f-4e5928a6e191",
+        "id": "ANPATLHRVGHQQXLOLL3XC",
+        "type": "managed",
+        "arn": "arn:aws:iam::12345679810:policy/service-role/AWSLambdaBasicExecutionRole-19bcc8a5-cfdd-43cf-8b3f-4e5928a6e191",
+        "document": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": "logs:CreateLogGroup",
+              "Resource": "arn:aws:logs:eu-west-1:12345679810:*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Resource": [
+                "arn:aws:logs:eu-west-1:12345679810:log-group:/aws/lambda/HelloLambda:*"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "resources": {
+        "statements": [
+          {
+            "resource": "arn:aws:logs:eu-west-1:12345679810:*",
+            "service": "logs",
+            "effect": "Allow",
+            "action": "logs:CreateLogGroup",
+            "source": {
+              "index": "0",
+              "policyName": "AWSLambdaBasicExecutionRole-19bcc8a5-cfdd-43cf-8b3f-4e5928a6e191",
+              "policyType": "managed"
+            }
+          },
+          {
+            "resource": "arn:aws:logs:eu-west-1:12345679810:log-group:/aws/lambda/HelloLambda:*",
+            "service": "logs",
+            "effect": "Allow",
+            "action": "logs:CreateLogStream",
+            "source": {
+              "index": "1",
+              "policyName": "AWSLambdaBasicExecutionRole-19bcc8a5-cfdd-43cf-8b3f-4e5928a6e191",
+              "policyType": "managed"
+            }
+          },
+          {
+            "resource": "arn:aws:logs:eu-west-1:12345679810:log-group:/aws/lambda/HelloLambda:*",
+            "service": "logs",
+            "effect": "Allow",
+            "action": "logs:PutLogEvents",
+            "source": {
+              "index": "1",
+              "policyName": "AWSLambdaBasicExecutionRole-19bcc8a5-cfdd-43cf-8b3f-4e5928a6e191",
+              "policyType": "managed"
+            }
+          }
+        ]
+      }
+    },
+    "trustedEntities": [
+      "lambda.amazonaws.com"
+    ]
+  }
