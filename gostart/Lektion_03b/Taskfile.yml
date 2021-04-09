@@ -1,0 +1,9 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build:
+    desc: Kompilieren des statischen ausführbaren Programms
+    cmds:
+      - go build -o dist/hello main/hello.go

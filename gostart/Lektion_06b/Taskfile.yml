@@ -1,0 +1,14 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  package:
+    dir: code
+    cmds:
+      - env GOOS=linux go build -ldflags="-s -w" -o dist/main main/main.go
+      - cd ../dist && zip hello.zip main
+    silent: true

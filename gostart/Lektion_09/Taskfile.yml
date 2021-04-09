@@ -1,0 +1,25 @@
+# https://taskfile.dev
+
+version: '3'
+
+
+tasks:
+  build:
+    dir: code
+    desc: "Building go linux"
+    cmds:
+      - env GOOS=linux go build -ldflags="-s -w" -o ../dist/main main/main.go
+      - task: package
+    silent: true
+
+  package:
+    dir: dist
+    cmds: 
+      - zip hello.zip main
+
+  test:
+    dir: code
+    desc: go unit tests
+    cmds:
+      - go test
+
