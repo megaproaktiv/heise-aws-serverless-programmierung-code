@@ -34,4 +34,3 @@ Follow me on Twitter @megaproaktiv
 
 [GO Serverless Anwendung](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/tree/main/gosls)
 
-P
