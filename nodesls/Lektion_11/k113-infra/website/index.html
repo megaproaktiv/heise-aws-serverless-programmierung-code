@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Berechnung BMI Index</title>
+    
+</head>
+<body>
+    <h1>Berechnung BMI Index </h1>
+    <hr>
+    <form method="get" action="https://oem9ox3gn3.execute-api.eu-central-1.amazonaws.com/prod/bmi">
+
+      <table>
+        <tr>
+        <td>
+          Alter :
+        </td>
+        <td>
+          <input id="age" name="age" type="text"/>
+        </td>
+      </tr>
+      <tr>
+      <tr>
+        <td>
+          Körpergröße in cm
+        </td>
+        <td>
+          <input id="height" name="height" type="text"/>
+        </td>
+      </tr>
+
+      <tr>
+      <tr>
+        <td>
+          Gewicht
+        </td>
+        <td>
+          <input id="weight" name="weight" type="text"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+        </td>
+        <td>
+          <button type="submit" >Submit</button>
+        </td>
+      </tr>
+      </table>  
+
+
+    </form>
+
+
+<script type="text/javascript">
+    function getDateTime() {
+        var formElementDateTime= document.getElementById('datetime');
+        var date = new Date();
+        formElementDateTime.value = date.toDateString() + ' ' + date.toTimeString();
+
+    }
+    window.onload = getDateTime;
+</script>
+
+</body>
+</html>

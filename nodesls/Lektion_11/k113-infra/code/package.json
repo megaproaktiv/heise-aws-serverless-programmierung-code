@@ -1,0 +1,17 @@
+{
+  "name": "bmi",
+  "version": "0.1.0",
+  "description": "Berechnung des BMI Index als Lambda",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gernot Glawe",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "log4js": "^6.3.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "queryStringParameters" : {
+  "age" : "42",
+  "weight" : "113",
+  "height" : "188"
+  }
+}
