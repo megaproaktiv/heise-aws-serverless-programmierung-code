@@ -1,0 +1,30 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  dist: dist
+  lambda: HelloLambdaPy
+  bin: lambda
+  region: eu-central-1
+
+tasks:
+  package:
+    dir: code
+    cmds: 
+      - cmd: rm ../{{.dist}}/{{.bin}}.zip
+        ignore_error: true
+      - zip -r ../{{.dist}}/{{.bin}}.zip .
+    silent: true
+
+  deploy:
+    desc: Hochladen Lambda Funktionscode
+    deps: [package]
+    cmds:
+      - aws lambda update-function-code --function-name  {{.lambda}} --zip-file fileb://{{.dist}}/{{.bin}}.zip --region {{.region}}
+
+  invoke:
+    desc: Aufrufen lambda
+    cmds: 
+      - aws lambda invoke --function-name HelloLambda --region eu-west-1 out.json
+      - cat out.json

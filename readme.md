@@ -8,30 +8,30 @@ Follow me on Twitter @megaproaktiv
 
 #### Kapitel 2
 
-[Node.JS](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/nodestart)
+[Node.JS](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/tree/main/nodestart)
 
 #### Kapitel 3
 
-[Python](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/pythonstart)
+[Python](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/tree/main/pythonstart)
 
 #### Kapitel 4
 
-[GO](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/gostart)
+[GO](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/tree/main/gostart)
 
 #### Kapitel 5
 
-[CDK](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/cdk)
+[CDK](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/tree/main/cdk)
 
 #### Kapitel 6
 
-[Node Serverless Anwendung](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/nodesls)
+[Node Serverless Anwendung](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/tree/main/nodesls)
 
 #### Kapitel 7
 
-[Python Serverless Anwendung](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/pythonsls)
+[Python Serverless Anwendung](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/tree/main/pythonsls)
 
 #### Kapitel 8
 
-[GO Serverless Anwendung](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/gosls)
+[GO Serverless Anwendung](https://github.com/megaproaktiv/heise-aws-serverless-programmierung-code/tree/main/gosls)
 
 P

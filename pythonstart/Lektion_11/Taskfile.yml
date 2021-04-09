@@ -1,0 +1,29 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  dist: dist
+  lambda: S3Counter
+  bin: lambda
+  region: eu-central-1
+
+tasks:
+  package:
+    dir: lambdapy
+    cmds: 
+      - cd lib/python3.8/site-packages && zip -r ../../../../{{.dist}}/{{.bin}}.zip .
+      - zip -g ../{{.dist}}/{{.bin}}.zip *.py
+    silent: true
+
+  deploy:
+    desc: Hochladen Lambda Funktionscode
+    deps: [package]
+    cmds:
+      - aws lambda update-function-code --function-name  {{.lambda}} --zip-file fileb://{{.dist}}/{{.bin}}.zip --region {{.region}}
+
+  invoke:
+    desc: Aufrufen lambda
+    cmds: 
+      - aws lambda invoke --function-name HelloLambda --region eu-west-1 out.json
+      - cat out.json
